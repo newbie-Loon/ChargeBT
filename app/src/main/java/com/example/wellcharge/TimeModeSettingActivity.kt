@@ -144,7 +144,10 @@ class TimeModeSettingActivity : ComponentActivity() {
     private fun setInitValue(isAutoChecked : Boolean){
         val spinnerHour: Spinner = findViewById(R.id.spinnerHour)
         val spinnerMin: Spinner = findViewById(R.id.spinnerMin)
+        val autoTimeOnOffMode : Switch = findViewById(R.id.autoTimeOnOffMode)
+        autoTimeOnOffMode.isChecked = isAutoChecked
         if(isAutoChecked){
+
             setStopWatchVisible(false)
         }else{
             setStopWatchVisible(true)
