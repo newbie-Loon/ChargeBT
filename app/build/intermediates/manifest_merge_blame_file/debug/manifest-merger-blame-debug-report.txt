@@ -1,0 +1,294 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.wellcharge"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.BLUETOOTH" />
+11-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:5:5-68
+11-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:5:22-65
+12    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+12-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:6:5-74
+12-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:6:22-71
+13    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+13-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:7:5-76
+13-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:7:22-73
+14
+15    <permission
+15-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\6fbb08855fecbb68ca7d19ed7a6f4738\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+16        android:name="com.example.wellcharge.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\6fbb08855fecbb68ca7d19ed7a6f4738\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\6fbb08855fecbb68ca7d19ed7a6f4738\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="com.example.wellcharge.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\6fbb08855fecbb68ca7d19ed7a6f4738\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\6fbb08855fecbb68ca7d19ed7a6f4738\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+20
+21    <application
+21-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:9:5-98:19
+22        android:allowBackup="true"
+22-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:10:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\6fbb08855fecbb68ca7d19ed7a6f4738\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+24        android:dataExtractionRules="@xml/data_extraction_rules"
+24-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:11:9-65
+25        android:debuggable="true"
+26        android:extractNativeLibs="false"
+27        android:fullBackupContent="@xml/backup_rules"
+27-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:12:9-54
+28        android:icon="@mipmap/ic_launcher"
+28-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:13:9-43
+29        android:label="@string/app_name"
+29-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:14:9-41
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:15:9-54
+31        android:supportsRtl="true"
+31-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:16:9-35
+32        android:theme="@style/Theme.WellCharge" >
+32-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:17:9-48
+33        <activity
+33-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:19:9-23:55
+34            android:name="com.example.wellcharge.SleepModeActivity"
+34-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:20:13-46
+35            android:exported="false"
+35-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:21:13-37
+36            android:label="@string/title_activity_sleep_mode"
+36-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:22:13-62
+37            android:theme="@style/Theme.WellCharge" />
+37-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:23:13-52
+38        <activity
+38-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:24:9-28:55
+39            android:name="com.example.wellcharge.LedSettingActivity"
+39-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:25:13-47
+40            android:exported="false"
+40-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:26:13-37
+41            android:label="@string/title_activity_led_setting"
+41-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:27:13-63
+42            android:theme="@style/Theme.WellCharge" />
+42-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:28:13-52
+43        <activity
+43-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:29:9-33:55
+44            android:name="com.example.wellcharge.SoundSettingActivity"
+44-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:30:13-49
+45            android:exported="false"
+45-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:31:13-37
+46            android:label="@string/title_activity_sound_setting"
+46-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:32:13-65
+47            android:theme="@style/Theme.WellCharge" />
+47-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:33:13-52
+48        <activity
+48-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:34:9-38:55
+49            android:name="com.example.wellcharge.TimeModeSettingActivity"
+49-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:35:13-52
+50            android:exported="false"
+50-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:36:13-37
+51            android:label="@string/title_activity_time_mode_setting"
+51-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:37:13-69
+52            android:theme="@style/Theme.WellCharge" />
+52-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:38:13-52
+53        <activity
+53-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:39:9-43:55
+54            android:name="com.example.wellcharge.TempSettingActivity"
+54-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:40:13-48
+55            android:exported="false"
+55-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:41:13-37
+56            android:label="@string/title_activity_temp_setting"
+56-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:42:13-64
+57            android:theme="@style/Theme.WellCharge" />
+57-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:43:13-52
+58        <activity
+58-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:44:9-48:55
+59            android:name="com.example.wellcharge.ModeSettingActivity"
+59-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:45:13-48
+60            android:exported="false"
+60-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:46:13-37
+61            android:label="@string/title_activity_mode_setting"
+61-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:47:13-64
+62            android:theme="@style/Theme.WellCharge" />
+62-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:48:13-52
+63        <activity
+63-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:49:9-53:55
+64            android:name="com.example.wellcharge.EtcSettingActivity"
+64-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:50:13-47
+65            android:exported="false"
+65-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:51:13-37
+66            android:label="@string/title_activity_etc_setting"
+66-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:52:13-63
+67            android:theme="@style/Theme.WellCharge" />
+67-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:53:13-52
+68
+69        <service
+69-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:55:9-58:39
+70            android:name="com.example.wellcharge.service.BTKeepConnService"
+70-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:56:13-54
+71            android:enabled="true"
+71-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:57:13-35
+72            android:exported="true" />
+72-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:58:13-36
+73
+74        <activity
+74-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:60:9-64:55
+75            android:name="com.example.wellcharge.SetVoltageAvtivity"
+75-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:61:13-47
+76            android:exported="false"
+76-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:62:13-37
+77            android:label="@string/title_activity_set_voltage"
+77-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:63:13-63
+78            android:theme="@style/Theme.WellCharge" />
+78-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:64:13-52
+79        <activity
+79-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:65:9-69:55
+80            android:name="com.example.wellcharge.SetTimePickerActivity"
+80-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:66:13-50
+81            android:exported="false"
+81-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:67:13-37
+82            android:label="@string/title_activity_set_time_picker"
+82-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:68:13-67
+83            android:theme="@style/Theme.WellCharge" />
+83-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:69:13-52
+84        <activity
+84-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:70:9-74:55
+85            android:name="com.example.wellcharge.MainDisplayActivity"
+85-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:71:13-48
+86            android:exported="false"
+86-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:72:13-37
+87            android:label="@string/title_activity_main_display"
+87-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:73:13-64
+88            android:theme="@style/Theme.WellCharge" />
+88-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:74:13-52
+89        <activity
+89-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:75:9-85:20
+90            android:name="com.example.wellcharge.MainActivity"
+90-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:76:13-41
+91            android:exported="true"
+91-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:77:13-36
+92            android:label="@string/app_name"
+92-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:78:13-45
+93            android:theme="@style/Theme.WellCharge" >
+93-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:79:13-52
+94            <intent-filter>
+94-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:80:13-84:29
+95                <action android:name="android.intent.action.MAIN" />
+95-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:81:17-69
+95-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:81:25-66
+96
+97                <category android:name="android.intent.category.LAUNCHER" />
+97-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:83:17-77
+97-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:83:27-74
+98            </intent-filter>
+99        </activity> <!-- <activity -->
+100        <!-- android:name=".MainActivity" -->
+101        <!-- android:exported="true" -->
+102        <!-- android:label="@string/app_name" -->
+103        <!-- android:theme="@style/Theme.WellCharge"> -->
+104        <!-- <intent-filter> -->
+105        <!-- <action android:name="android.intent.action.MAIN" /> -->
+106        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+107        <!-- </intent-filter> -->
+108        <!-- </activity> -->
+109        <meta-data
+109-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:95:9-97:57
+110            android:name="preloaded_fonts"
+110-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:96:13-43
+111            android:resource="@array/preloaded_fonts" />
+111-->C:\Users\User\AndroidStudioProjects\WellCharge\app\src\main\AndroidManifest.xml:97:13-54
+112
+113        <activity
+113-->[androidx.compose.ui:ui-test-manifest:1.4.0] C:\Users\User\.gradle\caches\transforms-3\768ed22ee5b87667317a97ec75e6bf9d\transformed\ui-test-manifest-1.4.0\AndroidManifest.xml:23:9-25:39
+114            android:name="androidx.activity.ComponentActivity"
+114-->[androidx.compose.ui:ui-test-manifest:1.4.0] C:\Users\User\.gradle\caches\transforms-3\768ed22ee5b87667317a97ec75e6bf9d\transformed\ui-test-manifest-1.4.0\AndroidManifest.xml:24:13-63
+115            android:exported="true" />
+115-->[androidx.compose.ui:ui-test-manifest:1.4.0] C:\Users\User\.gradle\caches\transforms-3\768ed22ee5b87667317a97ec75e6bf9d\transformed\ui-test-manifest-1.4.0\AndroidManifest.xml:25:13-36
+116        <activity
+116-->[androidx.compose.ui:ui-tooling:1.4.0] C:\Users\User\.gradle\caches\transforms-3\378df300ee8cfa98932194233ccd9546\transformed\ui-tooling-1.4.0\AndroidManifest.xml:23:9-25:39
+117            android:name="androidx.compose.ui.tooling.PreviewActivity"
+117-->[androidx.compose.ui:ui-tooling:1.4.0] C:\Users\User\.gradle\caches\transforms-3\378df300ee8cfa98932194233ccd9546\transformed\ui-tooling-1.4.0\AndroidManifest.xml:24:13-71
+118            android:exported="true" />
+118-->[androidx.compose.ui:ui-tooling:1.4.0] C:\Users\User\.gradle\caches\transforms-3\378df300ee8cfa98932194233ccd9546\transformed\ui-tooling-1.4.0\AndroidManifest.xml:25:13-36
+119
+120        <provider
+120-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\transforms-3\0f580fefbee472720fe9e5d9915a383a\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+121            android:name="androidx.startup.InitializationProvider"
+121-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\transforms-3\0f580fefbee472720fe9e5d9915a383a\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+122            android:authorities="com.example.wellcharge.androidx-startup"
+122-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\transforms-3\0f580fefbee472720fe9e5d9915a383a\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+123            android:exported="false" >
+123-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\transforms-3\0f580fefbee472720fe9e5d9915a383a\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+124            <meta-data
+124-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\transforms-3\0f580fefbee472720fe9e5d9915a383a\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+125                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+125-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\transforms-3\0f580fefbee472720fe9e5d9915a383a\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+126                android:value="androidx.startup" />
+126-->[androidx.emoji2:emoji2:1.3.0] C:\Users\User\.gradle\caches\transforms-3\0f580fefbee472720fe9e5d9915a383a\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+127            <meta-data
+127-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User\.gradle\caches\transforms-3\b46f68eb43eec341fcf9850edf3ccb7b\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+128                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+128-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User\.gradle\caches\transforms-3\b46f68eb43eec341fcf9850edf3ccb7b\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+129                android:value="androidx.startup" />
+129-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\User\.gradle\caches\transforms-3\b46f68eb43eec341fcf9850edf3ccb7b\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+130            <meta-data
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+131                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+132                android:value="androidx.startup" />
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+133        </provider>
+134
+135        <uses-library
+135-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\transforms-3\a9cdb40a67b8b45ac03f0b021a05e087\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+136            android:name="androidx.window.extensions"
+136-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\transforms-3\a9cdb40a67b8b45ac03f0b021a05e087\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+137            android:required="false" />
+137-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\transforms-3\a9cdb40a67b8b45ac03f0b021a05e087\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+138        <uses-library
+138-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\transforms-3\a9cdb40a67b8b45ac03f0b021a05e087\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+139            android:name="androidx.window.sidecar"
+139-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\transforms-3\a9cdb40a67b8b45ac03f0b021a05e087\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+140            android:required="false" />
+140-->[androidx.window:window:1.0.0] C:\Users\User\.gradle\caches\transforms-3\a9cdb40a67b8b45ac03f0b021a05e087\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+141
+142        <receiver
+142-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+143            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+143-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+144            android:directBootAware="false"
+144-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+145            android:enabled="true"
+145-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+146            android:exported="true"
+146-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+147            android:permission="android.permission.DUMP" >
+147-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+148            <intent-filter>
+148-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+149                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+150            </intent-filter>
+151            <intent-filter>
+151-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+152                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+153            </intent-filter>
+154            <intent-filter>
+154-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+155                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+156            </intent-filter>
+157            <intent-filter>
+157-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+158                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+158-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+158-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\User\.gradle\caches\transforms-3\57ddbf6ee7eb9b667bbfe99458a36aa5\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+159            </intent-filter>
+160        </receiver>
+161    </application>
+162
+163</manifest>
