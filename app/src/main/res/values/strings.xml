@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">WellCharge</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_transform">Transform</string>
+    <string name="menu_reflow">Reflow</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="lorem_ipsum_title">Lorem Ipsum"</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply placeholder text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry\'s standard placeholder text ever
+        since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+        type specimen book"
+    </string>
+    <string name="fab_content_description">Represents a view to invoke an action</string>
+    <string name="image_view_item_transform_content_description">Represents an image view in the
+        item
+    </string>
+    <string name="title_activity_main_display">MainDisplayActivity</string>
+    <string name="title_activity_set_time_picker">SetTimePickerActivity</string>
+    <string name="title_activity_set_voltage">SetVoltage</string>
+    <string name="title_activity_etc_setting">EtcSetting</string>
+    <string name="timer">Timer</string>
+    <string name="stopWatch">StopWatch</string>
+    <string name="SetTimeHeader">ตั้งเวลาชาร์จ</string>
+    <string name="hour">ชั่วโมง</string>
+    <string name="min">นาที</string>
+    <string name="startTh">เริ่มต้น</string>
+    <string name="endTh">สิ้นสุด</string>
+    <string name="timeSeparate">:</string>
+    <string name="modesetting">    โหมด</string>
+    <string name="tempsetting">    อุณหภูมิ</string>
+    <string name="timeSetting">    ตั้งเวลา</string>
+    <string name="soundsetting">    เสียง</string>
+    <string name="ledsetting">    แสงLED</string>
+    <string name="sleepsetting">    Sleep Mode</string>
+    <string name="title_activity_mode_setting">ModeSettingActivity</string>
+    <string name="title_activity_temp_setting">TempSetting</string>
+    <string name="title_activity_time_mode_setting">TimeModeSettingActivity</string>
+    <string name="title_activity_sound_setting">soundSetting</string>
+    <string name="title_activity_led_setting">LedSetting</string>
+    <string name="title_activity_sleep_mode">SleepModeActivity</string>
+    <string name="AutoModeDes">ปรับลดกระแสไฟลง แต่ยังคงการชาร์จไว้อยู่</string>
+    <string name="AlarmModeDes">มีเสียงเตือน และไฟกระพริบ ให้ตรวจสอบ</string>
+    <string name="StopModeDes">หยุดการชาร์จทันทีที่อุณหภูมิสูงเกินกว่ากำหนด</string>
+
+
+</resources>
