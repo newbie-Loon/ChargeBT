@@ -153,7 +153,6 @@ class MainActivity : ComponentActivity() {
 //                    someDeviceName = deviceItemls[position]
                     someDeviceName = deviceBtList[position - 1].name
                     someDeviceAddr = deviceBtList[position - 1].address
-//                showToast("$someDeviceName $someDeviceAddr")
                 }
             }
 
