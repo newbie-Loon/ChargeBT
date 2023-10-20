@@ -51,13 +51,14 @@ class TempSettingActivity : ComponentActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setDefaultTempInit(temp : Int, onInput : Boolean){
         val tempShow : TextView = findViewById(R.id.tempShow)
-
+        val minValue = 60
         tempShow.text = "Temperature $temp °C"
         if(onInput){
         val tempSeeker : SeekBar = findViewById(R.id.TempSeeker)
-            tempSeeker.progress = temp
+            tempSeeker.progress = temp - minValue
         }
 
     }

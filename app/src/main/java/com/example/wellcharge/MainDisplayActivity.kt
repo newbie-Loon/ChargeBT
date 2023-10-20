@@ -2,6 +2,7 @@ package com.example.wellcharge
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
@@ -33,6 +34,7 @@ class MainDisplayActivity : ComponentActivity() {
         val plugTemp :TextView = findViewById(R.id.plugTemp)
         val relayTemp :TextView = findViewById(R.id.relayTemp)
         val time :TextView = findViewById(R.id.time)
+        time.visibility = View.INVISIBLE
 
         mService = ServiceHolder.getService()!!
 //        mService.mConnectedThread?.write("check")
@@ -114,10 +116,10 @@ class MainDisplayActivity : ComponentActivity() {
         val relayTemp: TextView = findViewById(R.id.relayTemp)
 //        val time :TextView = findViewById(R.id.time)
         val line = dataLogger.length() - 1
-        voltage.text = dataLogger.getJSONObject(line).getDouble("Voltage").toString()
-        current.text = dataLogger.getJSONObject(line).getDouble("Current").toString()
-        plugTemp.text = dataLogger.getJSONObject(line).getDouble("AC_plug_temperature").toString()
-        relayTemp.text = dataLogger.getJSONObject(line).getDouble("Relay_Temperature").toString()
+        voltage.text = dataLogger.getJSONObject(line).getDouble("fVoltage").toString()
+        current.text = dataLogger.getJSONObject(line).getDouble("fCurrent").toString()
+        plugTemp.text = dataLogger.getJSONObject(line).getDouble("fTempPlug").toString()
+        relayTemp.text = dataLogger.getJSONObject(line).getDouble("fTempRelay").toString()
 //        time.text = dataLogger.getJSONObject(line).getDouble("TIME").toString()
     }
 

@@ -54,7 +54,6 @@ class ModeSettingActivity : ComponentActivity() {
         modeStop.compoundDrawablePadding = 15
 
         if(mode == "Auto"){
-            val image = R.drawable.asset_17
             modeAuto.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
             modeAlarm.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             modeStop.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
