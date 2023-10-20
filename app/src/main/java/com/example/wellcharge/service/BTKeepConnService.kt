@@ -8,10 +8,12 @@ import android.bluetooth.BluetoothManager
 import android.bluetooth.BluetoothSocket
 import android.content.Intent
 import android.os.Binder
+import android.os.Build
 import android.os.Handler
 import android.os.IBinder
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
@@ -20,6 +22,8 @@ import java.io.InputStream
 import java.io.InvalidClassException
 import java.io.NotSerializableException
 import java.io.OutputStream
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.UUID
 
 
@@ -35,6 +39,9 @@ class BTKeepConnService() : Service() {
     private val context = this
     private val recDataString = StringBuilder()
     private val mBinder = LocalBinder()
+    @RequiresApi(Build.VERSION_CODES.O)
+    private val dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+
 
     override fun onCreate() {
         super.onCreate()
@@ -158,6 +165,7 @@ class BTKeepConnService() : Service() {
             mmSocket = temp!!
         }
 
+        @RequiresApi(Build.VERSION_CODES.O)
         @SuppressLint("MissingPermission")
         override fun run() {
             super.run()
@@ -170,6 +178,8 @@ class BTKeepConnService() : Service() {
                 mConnectedThread!!.start()
                 Log.d("DEBUG BT", "CONNECTED THREAD STARTED")
 //                mConnectedThread!!.write("x")
+                val dateTimeNow = LocalDateTime.now().format(dateTimeFormatter)
+                mConnectedThread!!.write(dateTimeNow)
             } catch (e: IOException) {
                 try {
                     Log.d("DEBUG BT", "SOCKET CONNECTION FAILED : ${e.toString()}")
