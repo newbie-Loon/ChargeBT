@@ -6,7 +6,6 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
 import android.content.ComponentName
-import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.content.pm.PackageManager
@@ -43,7 +42,7 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.conn_bt)
         val btDevice: Spinner = findViewById(R.id.btSelected)
         val btConn: ImageButton = findViewById(R.id.btConn)
-        val wifiConn: ImageButton = findViewById(R.id.wifiConn)
+//        val wifiConn: ImageButton = findViewById(R.id.wifiConn)
         clearCatchData()
         val bluetoothManager: BluetoothManager = getSystemService(BluetoothManager::class.java)
         bluetoothAdapter = bluetoothManager.adapter
@@ -66,7 +65,7 @@ class MainActivity : ComponentActivity() {
         deviceItemls.add("Select Device")
         for (device in pairedDevices) {
             deviceBtList.add(device)
-            deviceItemls.add(device.name + " " + device.address)
+            deviceItemls.add(device.name)
 
         }
         val adapterDevice = ArrayAdapter(
@@ -91,7 +90,7 @@ class MainActivity : ComponentActivity() {
                 deviceItemls.add("Select Device")
                 for (device in pairedDevicesin) {
                     deviceBtList.add(device)
-                    deviceItemls.add(device.name + " " + device.address)
+                    deviceItemls.add(device.name)
 
                 }
                 val adapterDevicea = ArrayAdapter(
@@ -118,7 +117,7 @@ class MainActivity : ComponentActivity() {
                     deviceItemls.add("Select Device")
                     for (device in pairedDevicesin) {
                         deviceBtList.add(device)
-                        deviceItemls.add(device.name + " " + device.address)
+                        deviceItemls.add(device.name)
 
                     }
                     val adapterDeviceb = ArrayAdapter(
@@ -170,24 +169,21 @@ class MainActivity : ComponentActivity() {
             }
 
             override fun onServiceDisconnected(className: ComponentName) {
-//                Log.e(TAG, "onServiceDisconnected")
                 mBound = false
             }
         }
 
-
-
         btConn.setOnClickListener {
             if (someDeviceName != null) {
-                val intentStartBTService = Intent(this, BTKeepConnService::class.java)
-                intentStartBTService.putExtra("someDeviceName", someDeviceName)
-                intentStartBTService.putExtra("someDeviceAddr", someDeviceAddr)
-                bindService(intentStartBTService, serviceConnStat, Context.BIND_AUTO_CREATE)
-//                startService(intentStartBTService)
-//                showToast("$someDeviceName $someDeviceAddr")
+//                val intentStartBTService = Intent(this, BTKeepConnService::class.java)
+//                intentStartBTService.putExtra("someDeviceName", someDeviceName)
+//                intentStartBTService.putExtra("someDeviceAddr", someDeviceAddr)
+//                bindService(intentStartBTService, serviceConnStat, Context.BIND_AUTO_CREATE)
                 val intent = Intent(applicationContext, MainDisplayActivity::class.java)
+                intent.putExtra("someDeviceName", someDeviceName)
+                intent.putExtra("someDeviceAddr", someDeviceAddr)
                 startActivity(intent)
-
+                finish()
             }
         }
 

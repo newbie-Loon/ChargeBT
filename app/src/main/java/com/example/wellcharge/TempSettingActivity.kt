@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.activity.ComponentActivity
 import com.example.wellcharge.service.BTKeepConnService
 import com.example.wellcharge.service.ServiceHolder
+import com.example.wellcharge.service.SettingValue
 
 class TempSettingActivity : ComponentActivity() {
     private lateinit var mService: BTKeepConnService
@@ -21,8 +22,21 @@ class TempSettingActivity : ComponentActivity() {
         mService = ServiceHolder.getService()!!
         var temp : String? = null
 
-//       ---------------Make Initial
-        setDefaultTempInit(60, true)
+//       ---------------Make Initial---------------------
+        //      get iLed from object
+        val iTempSetPoint = SettingValue.getITempSetPoint()
+        val iMaxC = SettingValue.getIMaxCurrentCharging()
+//        set Default iLed
+        if (iTempSetPoint != null) {
+            setDefaultTempInit(iTempSetPoint, true)
+        }else{
+            setDefaultTempInit(60, true)
+        }
+//       ---------------Make Initial---------------------
+        when(iMaxC){
+            16->tempSeeker.max = 20
+            32->tempSeeker.max = 40
+        }
 
         tempSeeker.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             var minValue = 60
@@ -34,15 +48,13 @@ class TempSettingActivity : ComponentActivity() {
                 setDefaultTempInit(change, false)
                 temp = change.toString()
             }
-
             override fun onStartTrackingTouch(seekBar: SeekBar) {
                 // you can probably leave this empty
             }
-
             override fun onStopTrackingTouch(seekBar: SeekBar) {
                 // you can probably leave this empty
-                mService.mConnectedThread?.write("$temp")
-
+                mService.mConnectedThread?.write("\"{\"cmd\":25,\"iTempSetPoint\":$temp}\"")
+                SettingValue.setITempSetPoint(Integer.parseInt(temp))
             }
         })
 

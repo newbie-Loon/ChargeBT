@@ -40,7 +40,7 @@ class BTKeepConnService() : Service() {
     private val recDataString = StringBuilder()
     private val mBinder = LocalBinder()
     @RequiresApi(Build.VERSION_CODES.O)
-    private val dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+    private val dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")
 
 
     override fun onCreate() {
@@ -66,6 +66,9 @@ class BTKeepConnService() : Service() {
                 recDataString.delete(0, recDataString.length)
             }
         }
+
+        Toast.makeText(this, "message onBind", Toast.LENGTH_SHORT).show()
+
 
         val bluetoothManager: BluetoothManager = getSystemService(BluetoothManager::class.java)
         val someDeviceName = intent?.getStringExtra("someDeviceName")
@@ -169,31 +172,23 @@ class BTKeepConnService() : Service() {
         @SuppressLint("MissingPermission")
         override fun run() {
             super.run()
-            Log.d("DEBUG BT", "IN CONNECTING THREAD RUN")
-//            btAdapter!!.cancelDiscovery()
             try {
                 mmSocket.connect()
-                Log.d("DEBUG BT", "BT SOCKET CONNECTED")
                 mConnectedThread = ConnectedThread(mmSocket)
                 mConnectedThread!!.start()
-                Log.d("DEBUG BT", "CONNECTED THREAD STARTED")
-//                mConnectedThread!!.write("x")
                 val dateTimeNow = LocalDateTime.now().format(dateTimeFormatter)
-                mConnectedThread!!.write(dateTimeNow)
+
+                mConnectedThread!!.write("{\"cmd\":21,\"Datetime\":\"$dateTimeNow\"}\n")
+                mConnectedThread!!.write("{\"cmd\":10}")
+
             } catch (e: IOException) {
                 try {
-                    Log.d("DEBUG BT", "SOCKET CONNECTION FAILED : ${e.toString()}")
-                    Log.d("BT SERVICE", "SOCKET CONNECTION FAILED, STOPPING SERVICE")
                     mmSocket.close()
                     stopSelf()
                 } catch (e2: IOException) {
-                    Log.d("DEBUG BT", "SOCKET CLOSING FAILED :${e2.toString()}")
-                    Log.d("BT SERVICE", "SOCKET CLOSING FAILED, STOPPING SERVICE")
                     stopSelf()
                 }
             } catch (e: IllegalStateException) {
-                Log.d("DEBUG BT", "CONNECTED THREAD START FAILED : ${e.toString()}")
-                Log.d("BT SERVICE", "CONNECTED THREAD START FAILED, STOPPING SERVICE")
                 stopSelf()
             }
         }
@@ -202,8 +197,6 @@ class BTKeepConnService() : Service() {
             try {
                 mmSocket.close()
             } catch (e2: IOException) {
-                Log.d("DEBUG BT", e2.toString())
-                Log.d("BT SERVICE", "SOCKET CLOSING FAILED, STOPPING SERVICE")
                 stopSelf()
             }
         }
@@ -239,11 +232,8 @@ class BTKeepConnService() : Service() {
                     var bytesRead = mmInStream.read(buffer)
                     writeLoggerData(buffer, 0, bytesRead)
                     val readMessage = String(buffer, 0, bytesRead)
-                    Log.d("DEBUG BT PART", "CONNECTED THREAD $readMessage")
                     bluetoothIn?.obtainMessage(handlerState, bytesRead, -1, readMessage)?.sendToTarget()
                 } catch (e: IOException) {
-                    Log.d("DEBUG BT", e.toString())
-                    Log.d("BT SERVICE", "UNABLE TO READ/WRITE, STOPPING SERVICE")
                     stopSelf()
                     break
                 }

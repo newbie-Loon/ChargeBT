@@ -8,40 +8,37 @@
 
 
     <Button
-        android:id="@+id/modeAuto"
-        android:layout_width="410dp"
-        android:layout_height="80dp"
-        android:background="@drawable/asset_14"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191" />
-
-    <Button
-        android:id="@+id/modeAlarm"
-        android:layout_width="410dp"
-        android:layout_height="80dp"
-        android:background="@drawable/asset_12"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
-
-    <Button
         android:id="@+id/modeStop"
-        android:layout_width="410dp"
-        android:layout_height="80dp"
+        android:layout_width="700dp"
+        android:layout_height="170dp"
         android:background="@drawable/asset_13"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintVertical_bias="0.545" />
+
+    <Button
+        android:id="@+id/modeAuto"
+        android:layout_width="700dp"
+        android:layout_height="170dp"
+        android:background="@drawable/asset_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.185" />
+
+    <Button
+        android:id="@+id/modeAlarm"
+        android:layout_width="700dp"
+        android:layout_height="170dp"
+        android:background="@drawable/asset_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.367" />
 
     <TextView
         android:id="@+id/textView19"
@@ -50,7 +47,7 @@
         android:fontFamily="@font/sriracha"
         android:text="โหมดอุณหภูมิ"
         android:textColor="#FFFFFF"
-        android:textSize="60sp"
+        android:textSize="80dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,8 +58,8 @@
 
     <Button
         android:id="@+id/backBtn"
-        android:layout_width="275dp"
-        android:layout_height="77dp"
+        android:layout_width="376dp"
+        android:layout_height="114dp"
         android:background="@drawable/asset_18"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,18 +69,17 @@
 
     <TextView
         android:id="@+id/DescriptionMode"
-        android:layout_width="384dp"
-        android:layout_height="158dp"
+        android:layout_width="554dp"
+        android:layout_height="191dp"
         android:fontFamily="@font/sriracha"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
+        app:layout_constraintVertical_bias="0.742" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

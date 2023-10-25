@@ -5,6 +5,7 @@ import android.widget.Button
 import androidx.activity.ComponentActivity
 import com.example.wellcharge.service.BTKeepConnService
 import com.example.wellcharge.service.ServiceHolder
+import com.example.wellcharge.service.SettingValue
 
 class LedSettingActivity : ComponentActivity() {
     private lateinit var mService: BTKeepConnService
@@ -15,53 +16,83 @@ class LedSettingActivity : ComponentActivity() {
 
         setContentView(R.layout.led_light_setting)
 
+        val ledOff : Button = findViewById(R.id.ledModeOff)
         val led1 : Button = findViewById(R.id.ledMode1)
         val led2 : Button = findViewById(R.id.ledMode2)
-        val led3 : Button = findViewById(R.id.ledMode3)
         val backBtn : Button = findViewById(R.id.backBtn)
 
-        setModeSetting("led1")
+//      get iLed from object
+        val iLed = SettingValue.getILed()
+//        set Default iLed
+//        if(iLed == 1){
+//            setModeSetting(mode = "led1",toDevice = false)
+//        }else if(iLed == 2){
+//            setModeSetting(mode = "led2",toDevice = false)
+//        }else{
+//            setModeSetting(mode = "ledOff",toDevice = false)
+//        }
+        when(iLed){
+            1 -> setModeSetting(mode = "led1",toDevice = false)
+            2 ->  setModeSetting(mode = "led2",toDevice = false)
+            else -> {
+                setModeSetting(mode = "ledOff",toDevice = false)            }
+        }
 
+
+//        setModeSetting("led1")
+
+        ledOff.setOnClickListener {
+            setModeSetting(mode = "ledOff",toDevice = true)
+        }
         led1.setOnClickListener {
-            setModeSetting("led1")
+            setModeSetting(mode = "led1",toDevice = true)
         }
         led2.setOnClickListener {
-            setModeSetting("led2")
-        }
-        led3.setOnClickListener {
-            setModeSetting("led3")
+            setModeSetting(mode = "led2",toDevice = true)
         }
 
         backBtn.setOnClickListener {
             finish()
         }
     }
-
-    private fun setModeSetting(mode : String){
+//    {
+//        "cmd":26,
+//        "iLed":0 // 0 off | 1 | 2
+//    }
+    private fun setModeSetting(mode : String , toDevice : Boolean = true){
+        val ledOff : Button = findViewById(R.id.ledModeOff)
         val led1 : Button = findViewById(R.id.ledMode1)
         val led2 : Button = findViewById(R.id.ledMode2)
-        val led3 : Button = findViewById(R.id.ledMode3)
         led1.compoundDrawablePadding = 15
         led2.compoundDrawablePadding = 15
-        led3.compoundDrawablePadding = 15
+        ledOff.compoundDrawablePadding = 15
 
+        if(mode == "ledOff"){
+            ledOff.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
+            led1.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
+            led2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
+            if(toDevice){
+                SettingValue.setILed(0)
+                mService.mConnectedThread?.write("{\"cmd\":27,\"iLed\":0}")
+            }
+        }
         if(mode == "led1"){
+            ledOff.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             led1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
             led2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            led3.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            mService.mConnectedThread?.write("led1")
+            if(toDevice){
+                SettingValue.setILed(1)
+                mService.mConnectedThread?.write("{\"cmd\":27,\"iLed\":1}")
+            }
         }
         if(mode == "led2"){
+            ledOff.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             led1.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             led2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
-            led3.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            mService.mConnectedThread?.write("led2")
-        }
-        if(mode == "led3"){
-            led1.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            led2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            led3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
-            mService.mConnectedThread?.write("led3")
+            if(toDevice){
+                SettingValue.setILed(2)
+                mService.mConnectedThread?.write("{\"cmd\":27,\"iLed\":2}")
+            }
         }
     }
 }

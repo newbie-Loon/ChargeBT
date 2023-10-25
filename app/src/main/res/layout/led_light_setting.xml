@@ -32,18 +32,6 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <Button
-        android:id="@+id/ledMode3"
-        android:layout_width="410dp"
-        android:layout_height="109dp"
-        android:background="@drawable/asset_10"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663" />
-
-    <Button
         android:id="@+id/ledMode2"
         android:layout_width="410dp"
         android:layout_height="109dp"
@@ -53,13 +41,25 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
+        app:layout_constraintVertical_bias="0.663" />
 
     <Button
         android:id="@+id/ledMode1"
         android:layout_width="410dp"
         android:layout_height="109dp"
         android:background="@drawable/asset_11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.449" />
+
+    <Button
+        android:id="@+id/ledModeOff"
+        android:layout_width="410dp"
+        android:layout_height="109dp"
+        android:background="@drawable/asset_off"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"

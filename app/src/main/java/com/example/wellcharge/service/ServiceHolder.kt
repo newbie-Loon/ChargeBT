@@ -10,4 +10,8 @@ object ServiceHolder {
     fun getService(): BTKeepConnService? {
         return myService
     }
+
+    fun clearService(){
+        myService = null
+    }
 }

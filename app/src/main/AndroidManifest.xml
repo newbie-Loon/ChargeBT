@@ -32,11 +32,6 @@
             android:label="@string/title_activity_sound_setting"
             android:theme="@style/Theme.WellCharge" />
         <activity
-            android:name=".TimeModeSettingActivity"
-            android:exported="false"
-            android:label="@string/title_activity_time_mode_setting"
-            android:theme="@style/Theme.WellCharge" />
-        <activity
             android:name=".TempSettingActivity"
             android:exported="false"
             android:label="@string/title_activity_temp_setting"
@@ -58,7 +53,7 @@
             android:exported="true" />
 
         <activity
-            android:name=".SetVoltageAvtivity"
+            android:name=".SetCurrentActivity"
             android:exported="false"
             android:label="@string/title_activity_set_voltage"
             android:theme="@style/Theme.WellCharge" />

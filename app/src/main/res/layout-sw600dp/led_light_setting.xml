@@ -6,11 +6,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/artboard_3">
 
-
     <Button
         android:id="@+id/backBtn"
-        android:layout_width="275dp"
-        android:layout_height="77dp"
+        android:layout_width="385dp"
+        android:layout_height="120dp"
         android:background="@drawable/asset_18"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,11 +18,11 @@
         app:layout_constraintVertical_bias="0.899" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sriracha"
-        android:text="เสียง"
+        android:text="แสง LED"
         android:textColor="#FFFFFF"
         android:textSize="60sp"
         android:textStyle="bold"
@@ -34,39 +33,36 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <Button
-        android:id="@+id/sound2"
-        android:layout_width="410dp"
-        android:layout_height="109dp"
-        android:background="@drawable/asset_9"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663" />
-
-    <Button
-        android:id="@+id/sound1"
-        android:layout_width="410dp"
-        android:layout_height="109dp"
+        android:id="@+id/ledMode1"
+        android:layout_width="700dp"
+        android:layout_height="200dp"
         android:background="@drawable/asset_11"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.449" />
 
     <Button
-        android:id="@+id/soundOff"
-        android:layout_width="410dp"
-        android:layout_height="109dp"
+        android:id="@+id/ledMode2"
+        android:layout_width="700dp"
+        android:layout_height="200dp"
+        android:background="@drawable/asset_9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.662" />
+
+    <Button
+        android:id="@+id/ledModeOff"
+        android:layout_width="700dp"
+        android:layout_height="200dp"
         android:background="@drawable/asset_off"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242" />
+        app:layout_constraintVertical_bias="0.24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
