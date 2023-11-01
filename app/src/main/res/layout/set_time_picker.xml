@@ -13,7 +13,7 @@
         android:fontFamily="@font/sriracha"
         android:text="จับเวลาชาร์จ"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="@dimen/_15sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
@@ -21,25 +21,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.273" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/sriracha"
-        android:text="ตั้งเวลาชาร์จ"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
-
     <Button
         android:id="@+id/back"
-        android:layout_width="281dp"
-        android:layout_height="67dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset_18"
         android:fontFamily="@font/sriracha"
         android:textSize="20sp"
@@ -48,7 +33,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintVertical_bias="0.918"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.1"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -57,7 +44,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/SetTimeHeader"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="@dimen/_28sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +60,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/startTh"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="@dimen/_25sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,8 +71,8 @@
 
     <Spinner
         android:id="@+id/spinnerMin"
-        android:layout_width="105dp"
-        android:layout_height="79dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/blue_outline"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,7 +80,9 @@
         app:layout_constraintHorizontal_bias="0.758"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593" />
+        app:layout_constraintVertical_bias="0.593"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.095"/>
 
     <TextView
         android:id="@+id/timeSeparate"
@@ -101,8 +90,7 @@
         android:layout_height="wrap_content"
         android:text="@string/timeSeparate"
         android:textColor="#FFFFFF"
-        android:textSize="60sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/_45sdp"        android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,8 +100,8 @@
 
     <Spinner
         android:id="@+id/spinnerHour"
-        android:layout_width="105dp"
-        android:layout_height="79dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/blue_outline"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -121,22 +109,26 @@
         app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593" />
+        app:layout_constraintVertical_bias="0.593"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.095"/>
 
     <Button
         android:id="@+id/setEndTime"
-        android:layout_width="135dp"
-        android:layout_height="73dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/button_round_back"
         android:fontFamily="@font/sriracha"
         android:text="ตั้งเวลา"
-        android:textSize="20sp"
+        android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.776" />
+        app:layout_constraintVertical_bias="0.776"
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintHeight_percent="0.08"/>
 
     <TextView
         android:id="@+id/MinTh"
@@ -145,8 +137,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/min"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/_25sdp"        android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -161,8 +152,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sriracha"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/_25sdp"        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.819"
@@ -172,18 +162,20 @@
 
     <Button
         android:id="@+id/setStartTime"
-        android:layout_width="135dp"
-        android:layout_height="73dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/button_round_back"
         android:fontFamily="@font/sriracha"
         android:text="ตั้งเวลา"
-        android:textSize="20sp"
+        android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.498"
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintHeight_percent="0.08"/>
 
     <TextView
         android:id="@+id/HourTh"
@@ -192,8 +184,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/hour"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/_25sdp"        android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -208,8 +199,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sriracha"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/_25sdp"        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.819"
@@ -224,8 +214,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/endTh"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/_25sdp"        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.177"
@@ -240,29 +229,30 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/stopWatch"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="@dimen/_25sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintHorizontal_bias="0.728"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.193" />
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="50dp"
-        android:layout_height="49dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleX="2"
         android:scaleY="2"
         android:textOff="@string/timer"
         android:textOn="@string/stopWatch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintHeight_percent="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206"
+        app:layout_constraintVertical_bias="0.202"
+        app:layout_constraintWidth_percent="0.1"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <TextView
@@ -272,14 +262,29 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/timer"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="@dimen/_25sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.193" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sriracha"
+        android:text="ตั้งเวลาชาร์จ"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.267" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

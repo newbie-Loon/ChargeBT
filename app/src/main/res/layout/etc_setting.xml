@@ -8,93 +8,103 @@
 
     <Button
         android:id="@+id/soundSetting"
-        android:layout_width="372dp"
-        android:layout_height="77dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset_4"
         android:fontFamily="@font/sriracha"
         android:textAlignment="textStart"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/_23sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.406" />
+        app:layout_constraintVertical_bias="0.406"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.085"/>
 
     <Button
         android:id="@+id/modeSetting"
-        android:layout_width="372dp"
-        android:layout_height="77dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset_4"
         android:fontFamily="@font/sriracha"
         android:textAlignment="textStart"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/_23sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.126"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.085"/>
 
     <Button
         android:id="@+id/sleepSetting"
-        android:layout_width="372dp"
-        android:layout_height="77dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset_4"
         android:fontFamily="@font/sriracha"
         android:textAlignment="textStart"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/_23sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69" />
+        app:layout_constraintVertical_bias="0.69"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.085"/>
 
     <Button
         android:id="@+id/tempSetting"
-        android:layout_width="372dp"
-        android:layout_height="77dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset_4"
         android:fontFamily="@font/sriracha"
         android:textAlignment="textStart"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/_23sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintVertical_bias="0.265"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.085"/>
 
     <Button
         android:id="@+id/ledSetting"
-        android:layout_width="372dp"
-        android:layout_height="77dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset_4"
         android:fontFamily="@font/sriracha"
         android:textAlignment="textStart"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/_23sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546" />
+        app:layout_constraintVertical_bias="0.546"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.085"/>
 
     <Button
         android:id="@+id/backBtn"
-        android:layout_width="281dp"
-        android:layout_height="73dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset_18"
         android:fontFamily="@font/sriracha"
         android:textSize="34sp"
@@ -102,7 +112,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintVertical_bias="0.865"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.1"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

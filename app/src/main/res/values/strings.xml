@@ -28,7 +28,7 @@
     <string name="title_activity_set_voltage">SetVoltage</string>
     <string name="title_activity_etc_setting">EtcSetting</string>
     <string name="timer">Timer</string>
-    <string name="stopWatch">StopWatch</string>
+    <string name="stopWatch">Stop</string>
     <string name="SetTimeHeader">ตั้งเวลาชาร์จ</string>
     <string name="hour">ชั่วโมง</string>
     <string name="min">นาที</string>

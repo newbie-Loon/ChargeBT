@@ -8,11 +8,12 @@
 
     <TextView
         android:id="@+id/tempShow"
-        android:layout_width="530dp"
-        android:layout_height="112dp"
+        android:layout_width="569dp"
+        android:layout_height="121dp"
         android:fontFamily="@font/sriracha"
+        android:textAlignment="textStart"
         android:textColor="#FFFFFF"
-        android:textSize="60sp"
+        android:textSize="@dimen/_25sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +28,7 @@
         android:fontFamily="@font/sriracha"
         android:text="อุณหภูมิ"
         android:textColor="#FFFFFF"
-        android:textSize="96sp"
+        android:textSize="@dimen/_40sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,8 +49,8 @@
 
     <SeekBar
         android:id="@+id/TempSeeker"
-        android:layout_width="525dp"
-        android:layout_height="71dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:max="20"
         android:progressDrawable="@drawable/seekbar_style"
         android:scaleX="1"
@@ -60,6 +61,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintVertical_bias="0.519"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintHeight_percent="0.095"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

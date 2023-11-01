@@ -11,8 +11,6 @@
         android:layout_width="373dp"
         android:layout_height="117dp"
         android:background="@drawable/asset_18"
-        android:fontFamily="@font/sriracha"
-        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +25,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/SetTimeHeader"
         android:textColor="#FFFFFF"
-        android:textSize="60sp"
+        android:textSize="@dimen/_28sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,19 +36,21 @@
 
     <Button
         android:id="@+id/setStartTime"
-        android:layout_width="165dp"
-        android:layout_height="100dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/button_round_back"
         android:fontFamily="@font/sriracha"
         android:text="ตั้งเวลา"
-        android:textSize="34sp"
+        android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527" />
+        app:layout_constraintVertical_bias="0.527"
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintHeight_percent="0.08"/>
 
     <TextView
         android:id="@+id/endTimeTxt"
@@ -59,7 +59,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/endTh"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +75,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/min"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,7 +91,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/startTh"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sriracha"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,8 +117,8 @@
 
     <Spinner
         android:id="@+id/spinnerMin"
-        android:layout_width="105dp"
-        android:layout_height="79dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/blue_outline"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -126,22 +126,26 @@
         app:layout_constraintHorizontal_bias="0.738"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626" />
+        app:layout_constraintVertical_bias="0.626"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHeight_percent="0.07"/>
 
     <Button
         android:id="@+id/setEndTime"
-        android:layout_width="165dp"
-        android:layout_height="100dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/button_round_back"
         android:fontFamily="@font/sriracha"
         android:text="ตั้งเวลา"
-        android:textSize="34sp"
+        android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.757" />
+        app:layout_constraintVertical_bias="0.757"
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintHeight_percent="0.08"/>
 
     <TextView
         android:id="@+id/HourTh"
@@ -150,7 +154,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/hour"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -161,8 +165,8 @@
 
     <Spinner
         android:id="@+id/spinnerHour"
-        android:layout_width="105dp"
-        android:layout_height="79dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/blue_outline"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -170,7 +174,9 @@
         app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626" />
+        app:layout_constraintVertical_bias="0.626"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHeight_percent="0.07"/>
 
     <TextView
         android:id="@+id/startTime"
@@ -178,7 +184,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sriracha"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -193,7 +199,7 @@
         android:layout_height="wrap_content"
         android:text="@string/timeSeparate"
         android:textColor="#FFFFFF"
-        android:textSize="60sp"
+        android:textSize="@dimen/_30sdp"
         android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -209,7 +215,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/timer"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -225,7 +231,7 @@
         android:fontFamily="@font/sriracha"
         android:text="@string/stopWatch"
         android:textColor="#FFFFFF"
-        android:textSize="48sp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -241,7 +247,7 @@
         android:fontFamily="@font/sriracha"
         android:text="จับเวลาชาร์จ"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="@dimen/_14sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.841"
@@ -256,7 +262,7 @@
         android:fontFamily="@font/sriracha"
         android:text="ตั้งเวลาชาร์จ"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="@dimen/_14sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.186"
@@ -266,19 +272,20 @@
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="64dp"
-        android:layout_height="56dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleX="2"
         android:scaleY="2"
         android:textOff="@string/timer"
         android:textOn="@string/stopWatch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.222"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
+        app:layout_constraintVertical_bias="0.219"
+        tools:ignore="UseSwitchCompatOrMaterialXml"
+        app:layout_constraintWidth_percent="0.08"
+        app:layout_constraintHeight_percent="0.05"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

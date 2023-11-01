@@ -9,15 +9,17 @@
 
     <Button
         android:id="@+id/backBtn"
-        android:layout_width="385dp"
-        android:layout_height="120dp"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
         android:background="@drawable/asset_18"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906" />
+        app:layout_constraintVertical_bias="0.906"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.1"/>
 
     <TextView
         android:id="@+id/textView14"
@@ -26,7 +28,7 @@
         android:fontFamily="@font/sriracha"
         android:text="เสียง"
         android:textColor="#FFFFFF"
-        android:textSize="96sp"
+        android:textSize="@dimen/_50sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,35 +38,41 @@
 
     <Button
         android:id="@+id/soundOff"
-        android:layout_width="700dp"
-        android:layout_height="200dp"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
         android:background="@drawable/asset_off"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.248" />
+        app:layout_constraintVertical_bias="0.245"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintHeight_percent="0.135"/>
 
     <Button
         android:id="@+id/sound1"
-        android:layout_width="700dp"
-        android:layout_height="200dp"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
         android:background="@drawable/asset_11"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.462" />
+        app:layout_constraintVertical_bias="0.462"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintHeight_percent="0.135"/>
 
     <Button
         android:id="@+id/sound2"
-        android:layout_width="700dp"
-        android:layout_height="200dp"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
         android:background="@drawable/asset_9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.677" />
+        app:layout_constraintVertical_bias="0.677"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintHeight_percent="0.135"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
