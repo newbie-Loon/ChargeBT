@@ -35,10 +35,12 @@ class BTKeepConnService() : Service() {
     var mConnectingThread: ConnectingThread? = null
     var mConnectedThread: ConnectedThread? = null
     private var stopThread = false
-//    var device = null
+
+    //    var device = null
     private val context = this
     private val recDataString = StringBuilder()
     private val mBinder = LocalBinder()
+
     @RequiresApi(Build.VERSION_CODES.O)
     private val dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")
 
@@ -112,7 +114,6 @@ class BTKeepConnService() : Service() {
 
         val bluetoothManager: BluetoothManager = getSystemService(BluetoothManager::class.java)
         val someDeviceName = intent?.getStringExtra("someDeviceName")
-        val someDeviceAddr = intent?.getStringExtra("someDeviceAddr")
         btAdapter = bluetoothManager.adapter
         val pairedDevices: MutableSet<BluetoothDevice>? = btAdapter?.bondedDevices
         if (pairedDevices != null) {
@@ -273,7 +274,7 @@ class BTKeepConnService() : Service() {
         @SuppressLint("SuspiciousIndentation")
         fun write(input: String) {
             try {
-            val msgBuffer = input.toByteArray()
+                val msgBuffer = input.toByteArray()
                 mmOutStream.write(msgBuffer)
             } catch (e: IOException) {
                 stopSelf()
