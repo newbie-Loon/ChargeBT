@@ -66,7 +66,7 @@ class ModeSettingActivity : ComponentActivity() {
             des.text = getString(R.string.AutoModeDes)
             if(toDevice) {
                 SettingValue.setIMode(0)
-                mService.mConnectedThread?.write("{\"cmd\":24,\"iMode\":0}")
+                mService.mConnectedThread?.write("{\"cmd\":24,\"iMode\":0}\n")
             }
         }
         if(mode == "Alarm"){
@@ -77,7 +77,7 @@ class ModeSettingActivity : ComponentActivity() {
             des.text = getString(R.string.AlarmModeDes)
             if(toDevice) {
                 SettingValue.setIMode(1)
-                mService.mConnectedThread?.write("{\"cmd\":24,\"iMode\":1}")
+                mService.mConnectedThread?.write("{\"cmd\":24,\"iMode\":1}\n")
             }
         }
         if(mode == "Stop"){
@@ -88,7 +88,7 @@ class ModeSettingActivity : ComponentActivity() {
             des.text = getString(R.string.StopModeDes)
             if(toDevice) {
                 SettingValue.setIMode(2)
-                mService.mConnectedThread?.write("{\"cmd\":24,\"iMode\":2}")
+                mService.mConnectedThread?.write("{\"cmd\":24,\"iMode\":2}\n")
             }
         }
     }

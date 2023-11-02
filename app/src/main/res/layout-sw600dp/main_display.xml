@@ -16,10 +16,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.33"
-        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041"
+        app:layout_constraintVertical_bias="0.039"
         app:layout_constraintWidth_percent="0.7" />
 
     <TextView
@@ -40,19 +40,20 @@
 
     <TextView
         android:id="@+id/status"
-        android:layout_width="120dp"
+        android:layout_width="250dp"
         android:layout_height="45dp"
         android:fontFamily="@font/carter_one"
+        android:text="เชื่อมต่อพาหนะ"
         android:textAlignment="textEnd"
         android:textColor="@color/white"
         android:textSize="@dimen/_11sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintHorizontal_bias="0.672"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.267" />
+        app:layout_constraintVertical_bias="0.265" />
 
     <TextView
         android:id="@+id/relayTemp"

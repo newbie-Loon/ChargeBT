@@ -53,7 +53,7 @@ class TempSettingActivity : ComponentActivity() {
             }
             override fun onStopTrackingTouch(seekBar: SeekBar) {
                 // you can probably leave this empty
-                mService.mConnectedThread?.write("\"{\"cmd\":25,\"iTempSetPoint\":$temp}\"")
+                mService.mConnectedThread?.write("\"{\"cmd\":25,\"iTempSetPoint\":$temp}\"\n")
                 SettingValue.setITempSetPoint(Integer.parseInt(temp))
             }
         })

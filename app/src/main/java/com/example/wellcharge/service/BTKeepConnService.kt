@@ -180,7 +180,7 @@ class BTKeepConnService() : Service() {
                 val dateTimeNow = LocalDateTime.now().format(dateTimeFormatter)
 
                 mConnectedThread!!.write("{\"cmd\":21,\"Datetime\":\"$dateTimeNow\"}\n")
-                mConnectedThread!!.write("{\"cmd\":10}")
+                mConnectedThread!!.write("{\"cmd\":10}\n")
 
             } catch (e: IOException) {
                 try {

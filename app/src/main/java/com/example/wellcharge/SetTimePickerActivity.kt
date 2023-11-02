@@ -105,7 +105,7 @@ class SetTimePickerActivity : ComponentActivity() {
                     selectHour = hourItemLs[position]
                     if(selectMin != "min" && selectMin != null){
 //                        mService.mConnectedThread?.write("stopWatch mode start 0:0 Duration $selectHour:$selectMin")
-                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"0:0\",\"strDuration\":\"$selectHour:$selectMin\"}")
+                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"0:0\",\"strDuration\":\"$selectHour:$selectMin\"}\n")
 
                     }
                 }
@@ -128,7 +128,7 @@ class SetTimePickerActivity : ComponentActivity() {
                     selectMin = minItemLs[position]
                     if(selectHour != "hour" && selectHour != null){
 //                        mService.mConnectedThread?.write("stopWatch mode start 0:0 Duration $selectHour:$selectMin")
-                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"0:0\",\"strDuration\":\"$selectHour:$selectMin\"}")
+                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"0:0\",\"strDuration\":\"$selectHour:$selectMin\"}\n")
 
                     }
                 }
@@ -277,7 +277,7 @@ class SetTimePickerActivity : ComponentActivity() {
                             , LocalDateTime.of(dateEnd, LocalTime.of(endH!!, endM!!)))
                         val endHours = duration.toHours() % 24
                         val endMinutes = duration.toMinutes() % 60
-                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"$startH:$startM\",\"strDuration\":\"$endHours:$endMinutes\"}")
+                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"$startH:$startM\",\"strDuration\":\"$endHours:$endMinutes\"}\n")
 
 //                        mService.mConnectedThread?.write("Timer mode Start $startH:$startM, Duration $endHours:$endMinutes")
 
@@ -309,7 +309,7 @@ class SetTimePickerActivity : ComponentActivity() {
 //                            "strDuration":"xx:xx"
 //                        }
 //                        "{\"cmd\":23,\"strStartTime\":\"xx:xx\",\"strDuration\":\"xx:xx\"}"
-                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"$startH:$startM\",\"strDuration\":\"$endHours:$endMinutes\"}")
+                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"$startH:$startM\",\"strDuration\":\"$endHours:$endMinutes\"}\n")
 
 //                        mService.mConnectedThread?.write("Timer mode Start $startH:$startM, Duration $endHours:$endMinutes")
 

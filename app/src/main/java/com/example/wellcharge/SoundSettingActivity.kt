@@ -70,7 +70,7 @@ class SoundSettingActivity : ComponentActivity() {
             sound2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             if(toDevice) {
                 SettingValue.setIBuzzer(0)
-                mService.mConnectedThread?.write("{\"cmd\":26,\"iBuzzer\":0}")
+                mService.mConnectedThread?.write("{\"cmd\":26,\"iBuzzer\":0}\n")
 //                SettingValue.getSetting()?.
             }
         }
@@ -80,7 +80,7 @@ class SoundSettingActivity : ComponentActivity() {
             sound2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             if(toDevice) {
                 SettingValue.setIBuzzer(1)
-                mService.mConnectedThread?.write("{\"cmd\":26,\"iBuzzer\":1}")
+                mService.mConnectedThread?.write("{\"cmd\":26,\"iBuzzer\":1}\n")
             }
         }
         if(mode == "sound2"){
@@ -89,7 +89,7 @@ class SoundSettingActivity : ComponentActivity() {
             sound2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
             if(toDevice) {
                 SettingValue.setIBuzzer(2)
-                mService.mConnectedThread?.write("{\"cmd\":26,\"iBuzzer\":2}")
+                mService.mConnectedThread?.write("{\"cmd\":26,\"iBuzzer\":2}\n")
             }
         }
     }

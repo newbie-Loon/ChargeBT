@@ -72,10 +72,10 @@ class MainDisplayActivity : ComponentActivity() {
             startActivity(intent);
         }
         setStop.setOnClickListener {
-            mService.mConnectedThread?.write("{\"cmd\":30,\"bAutoCharging\":false}")
+            mService.mConnectedThread?.write("{\"cmd\":30,\"bAutoCharging\":false}\n")
         }
         setStart.setOnClickListener{
-            mService.mConnectedThread?.write("{\"cmd\":30,\"bAutoCharging\":true}")
+            mService.mConnectedThread?.write("{\"cmd\":30,\"bAutoCharging\":true}\n")
         }
     }
 

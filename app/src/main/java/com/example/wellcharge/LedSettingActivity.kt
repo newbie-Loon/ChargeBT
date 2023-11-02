@@ -73,7 +73,7 @@ class LedSettingActivity : ComponentActivity() {
             led2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             if(toDevice){
                 SettingValue.setILed(0)
-                mService.mConnectedThread?.write("{\"cmd\":27,\"iLed\":0}")
+                mService.mConnectedThread?.write("{\"cmd\":27,\"iLed\":0}\n")
             }
         }
         if(mode == "led1"){
@@ -82,7 +82,7 @@ class LedSettingActivity : ComponentActivity() {
             led2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             if(toDevice){
                 SettingValue.setILed(1)
-                mService.mConnectedThread?.write("{\"cmd\":27,\"iLed\":1}")
+                mService.mConnectedThread?.write("{\"cmd\":27,\"iLed\":1}\n")
             }
         }
         if(mode == "led2"){
@@ -91,7 +91,7 @@ class LedSettingActivity : ComponentActivity() {
             led2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
             if(toDevice){
                 SettingValue.setILed(2)
-                mService.mConnectedThread?.write("{\"cmd\":27,\"iLed\":2}")
+                mService.mConnectedThread?.write("{\"cmd\":27,\"iLed\":2}\n")
             }
         }
     }

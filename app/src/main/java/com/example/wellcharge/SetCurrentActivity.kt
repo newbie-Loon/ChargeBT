@@ -45,43 +45,43 @@ class SetCurrentActivity : ComponentActivity() {
 
         a6.setOnClickListener {
             SettingValue.setIChargingCurrent(6)
-            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":6}")
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":6}\n")
 //            showToast("")
             finish()
         }
         a10.setOnClickListener {
             SettingValue.setIChargingCurrent(10)
-            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":10}")
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":10}\n")
 //            showToast("")
             finish()
         }
         a13.setOnClickListener {
             SettingValue.setIChargingCurrent(13)
-            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":13}")
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":13}\n")
 //            showToast("")
             finish()
         }
         a16.setOnClickListener {
             SettingValue.setIChargingCurrent(16)
-            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":16}")
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":16}\n")
 //            showToast("")
             finish()
         }
         a20.setOnClickListener {
             SettingValue.setIChargingCurrent(20)
-            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":20}")
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":20}\n")
 //            showToast("")
             finish()
         }
         a25.setOnClickListener {
             SettingValue.setIChargingCurrent(25)
-            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":25}")
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":25}\n")
 //            showToast("")
             finish()
         }
         a32.setOnClickListener {
             SettingValue.setIChargingCurrent(32)
-            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":32}")
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":32}\n")
 //            showToast("")
             finish()
         }
