@@ -232,8 +232,8 @@ class BTKeepConnService() : Service() {
                     val buffer = ByteArray(mmInStream.available())
                     var bytesRead = mmInStream.read(buffer)
                     writeLoggerData(buffer, 0, bytesRead)
-                    val readMessage = String(buffer, 0, bytesRead)
-                    bluetoothIn?.obtainMessage(handlerState, bytesRead, -1, readMessage)?.sendToTarget()
+//                    val readMessage = String(buffer, 0, bytesRead)
+//                    bluetoothIn?.obtainMessage(handlerState, bytesRead, -1, readMessage)?.sendToTarget()
                 } catch (e: IOException) {
                     stopSelf()
                     break

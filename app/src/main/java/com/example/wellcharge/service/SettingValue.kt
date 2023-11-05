@@ -14,6 +14,7 @@ object SettingValue {
     private var iMaxCurrentCharging : Int? = null
     private var iChargingCurrent : Int? = null
     private var IChargingState : Int? = null
+    private var boolIsTablet : Boolean = false
 
     fun setSetting(jsonObject : JSONObject) {
         settingValue = jsonObject
@@ -80,6 +81,13 @@ object SettingValue {
         iChargingCurrent= input
     }
 
+    fun getIsTablet(): Boolean {
+        return boolIsTablet
+    }
+
+    fun setIsTablet(isTablet : Boolean){
+        boolIsTablet = isTablet
+    }
 
 
 }

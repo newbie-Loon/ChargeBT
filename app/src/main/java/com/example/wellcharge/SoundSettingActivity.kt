@@ -20,18 +20,9 @@ class SoundSettingActivity : ComponentActivity() {
         val sound2 : Button = findViewById(R.id.sound2)
         val backBtn : Button = findViewById(R.id.backBtn)
 
-//        setModeSetting("sound1")
-
 //      get iLed from object
         val iBuzzer = SettingValue.getIBuzzer()
-//        set Default iLed
-//        if(iBuzzer == 1){
-//            setModeSetting(mode = "sound1",toDevice = false)
-//        }else if(iBuzzer == 2){
-//            setModeSetting(mode = "sound2",toDevice = false)
-//        }else{
-//            setModeSetting(mode = "soundOff",toDevice = false)
-//        }
+
         when(iBuzzer){
             1 -> setModeSetting(mode = "sound1",toDevice = false)
             2 ->  setModeSetting(mode = "sound2",toDevice = false)
@@ -64,19 +55,22 @@ class SoundSettingActivity : ComponentActivity() {
         sound1.compoundDrawablePadding = 15
         sound2.compoundDrawablePadding = 15
         soundOff.compoundDrawablePadding = 15
+        var tick : Int = R.drawable.tick
+        if(SettingValue.getIsTablet()){
+            tick = R.drawable.tick_default
+        }
         if(mode == "soundOff"){
-            soundOff.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
+            soundOff.setCompoundDrawablesWithIntrinsicBounds(tick,0,0,0)
             sound1.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             sound2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             if(toDevice) {
                 SettingValue.setIBuzzer(0)
                 mService.mConnectedThread?.write("{\"cmd\":26,\"iBuzzer\":0}\n")
-//                SettingValue.getSetting()?.
             }
         }
         if(mode == "sound1"){
             soundOff.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            sound1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
+            sound1.setCompoundDrawablesWithIntrinsicBounds(tick,0,0,0)
             sound2.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             if(toDevice) {
                 SettingValue.setIBuzzer(1)
@@ -86,7 +80,7 @@ class SoundSettingActivity : ComponentActivity() {
         if(mode == "sound2"){
             soundOff.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             sound1.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            sound2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
+            sound2.setCompoundDrawablesWithIntrinsicBounds(tick,0,0,0)
             if(toDevice) {
                 SettingValue.setIBuzzer(2)
                 mService.mConnectedThread?.write("{\"cmd\":26,\"iBuzzer\":2}\n")

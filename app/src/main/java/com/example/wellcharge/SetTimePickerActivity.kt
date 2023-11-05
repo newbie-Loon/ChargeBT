@@ -161,12 +161,12 @@ class SetTimePickerActivity : ComponentActivity() {
             val minute = c.get(Calendar.MINUTE)
             var hour : String? = null
             var min : String? = null
-            if(hourOfDay<9){
+            if(hourOfDay<=9){
                 hour = "0$hourOfDay"
             }else{
                 hour = hourOfDay.toString()
             }
-            if(minute<9){
+            if(minute<=9){
                 min = "0$minute"
             }else{
                 min = minute.toString()
@@ -248,12 +248,12 @@ class SetTimePickerActivity : ComponentActivity() {
             { _, hourOfDay, minute ->
                 var hour : String? = null
                 var min : String? = null
-                if(hourOfDay<9){
+                if(hourOfDay<=9){
                     hour = "0$hourOfDay"
                 }else{
                     hour = hourOfDay.toString()
                 }
-                if(minute<9){
+                if(minute<=9){
                     min = "0$minute"
                 }else{
                     min = minute.toString()

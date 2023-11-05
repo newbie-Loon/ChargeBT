@@ -57,9 +57,12 @@ class ModeSettingActivity : ComponentActivity() {
         modeAuto.compoundDrawablePadding = 15
         modeAlarm.compoundDrawablePadding = 15
         modeStop.compoundDrawablePadding = 15
-
+        var tick : Int = R.drawable.tick
+        if(SettingValue.getIsTablet()){
+            tick = R.drawable.tick_default
+        }
         if(mode == "Auto"){
-            modeAuto.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
+            modeAuto.setCompoundDrawablesWithIntrinsicBounds(tick,0,0,0)
             modeAlarm.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             modeStop.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
@@ -71,7 +74,7 @@ class ModeSettingActivity : ComponentActivity() {
         }
         if(mode == "Alarm"){
             modeAuto.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            modeAlarm.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
+            modeAlarm.setCompoundDrawablesWithIntrinsicBounds(tick,0,0,0)
             modeStop.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
             des.text = getString(R.string.AlarmModeDes)
@@ -83,7 +86,7 @@ class ModeSettingActivity : ComponentActivity() {
         if(mode == "Stop"){
             modeAuto.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             modeAlarm.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            modeStop.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
+            modeStop.setCompoundDrawablesWithIntrinsicBounds(tick,0,0,0)
 
             des.text = getString(R.string.StopModeDes)
             if(toDevice) {

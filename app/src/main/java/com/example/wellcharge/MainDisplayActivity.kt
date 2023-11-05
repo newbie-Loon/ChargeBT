@@ -107,9 +107,9 @@ class MainDisplayActivity : ComponentActivity() {
                         val line: String = fin.readLine()
                         val jsonObject = JSONObject(line)
                         if(jsonObject.has("strChipId")){
-                            SettingValue.setSetting(jsonObject)
                             runOnUiThread{
                                 if(initChipId){
+                                    SettingValue.setSetting(jsonObject)
                                     showToast("ChipId: "+ jsonObject.getString("strChipId"))
                                     initChipId = false
                                 }
