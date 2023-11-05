@@ -1,78 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/artboard_3">
 
-    <Button
-        android:id="@+id/backBtn"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset_18"
+        android:background="@drawable/artboard_12"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.899"
-        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintVertical_bias="0.06"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.35"/>
+
+    <ImageButton
+        android:id="@+id/btConn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/artboard_9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624"
+        app:layout_constraintWidth_percent="0.5"
         app:layout_constraintHeight_percent="0.1"/>
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/sriracha"
-        android:text="แสง LED"
-        android:textColor="#FFFFFF"
-        android:textSize="@dimen/_45sdp"
-        android:textStyle="bold"
+    <ImageButton
+        android:id="@+id/wifiConn"
+        android:layout_width="390dp"
+        android:layout_height="94dp"
+        android:background="@drawable/artboard_10"
+        android:clickable="false"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintVertical_bias="0.765" />
 
-    <Button
-        android:id="@+id/ledMode2"
+    <Spinner
+        android:id="@+id/btSelected"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset_9"
+        android:background="@drawable/blue_outline"
+        android:popupBackground="@drawable/blue_outline"
+        android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663"
-        app:layout_constraintWidth_percent="1"
-        app:layout_constraintHeight_percent="0.12"/>
+        app:layout_constraintVertical_bias="0.463"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.095"/>
 
-    <Button
-        android:id="@+id/ledMode1"
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset_11"
+        android:background="@drawable/artboard_11"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449"
-        app:layout_constraintWidth_percent="1"
-        app:layout_constraintHeight_percent="0.12"/>
-
-    <Button
-        android:id="@+id/ledModeOff"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/asset_off"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.241"
-        app:layout_constraintWidth_percent="1"
-        app:layout_constraintHeight_percent="0.12"/>
-
+        app:layout_constraintVertical_bias="0.985"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.15"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

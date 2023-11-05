@@ -1,13 +1,15 @@
 package com.example.wellcharge
 
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.wellcharge.service.BTKeepConnService
 import com.example.wellcharge.service.ServiceHolder
+import com.example.wellcharge.service.SettingValue
 
-class SetVoltageAvtivity : ComponentActivity() {
+class SetCurrentActivity : ComponentActivity() {
     private lateinit var mService: BTKeepConnService
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,38 +26,62 @@ class SetVoltageAvtivity : ComponentActivity() {
         val a25 : ImageButton = findViewById(R.id.a25)
         val a32 : ImageButton = findViewById(R.id.a32)
 
+        when(SettingValue.getIMaxCurrentCharging()){
+            16 -> {
+                a20.visibility = View.INVISIBLE
+                a25.visibility = View.INVISIBLE
+                a32.visibility = View.INVISIBLE
+            }
+            32 ->{
+                a20.visibility = View.VISIBLE
+                a25.visibility = View.VISIBLE
+                a32.visibility = View.VISIBLE
+            }
+        }
+        if(SettingValue.getIChargingCurrent() != null){
+
+            showToast("ChargingCurrent : " + SettingValue.getIChargingCurrent())
+        }
+
         a6.setOnClickListener {
-            mService.mConnectedThread?.write("check a6")
+            SettingValue.setIChargingCurrent(6)
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":6}\n")
 //            showToast("")
             finish()
         }
         a10.setOnClickListener {
-            mService.mConnectedThread?.write("check a10")
+            SettingValue.setIChargingCurrent(10)
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":10}\n")
 //            showToast("")
             finish()
         }
         a13.setOnClickListener {
-            mService.mConnectedThread?.write("check a13")
+            SettingValue.setIChargingCurrent(13)
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":13}\n")
 //            showToast("")
             finish()
         }
         a16.setOnClickListener {
-            mService.mConnectedThread?.write("check 16")
+            SettingValue.setIChargingCurrent(16)
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":16}\n")
 //            showToast("")
             finish()
         }
         a20.setOnClickListener {
-            mService.mConnectedThread?.write("check 20")
+            SettingValue.setIChargingCurrent(20)
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":20}\n")
 //            showToast("")
             finish()
         }
         a25.setOnClickListener {
-            mService.mConnectedThread?.write("check 25")
+            SettingValue.setIChargingCurrent(25)
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":25}\n")
 //            showToast("")
             finish()
         }
         a32.setOnClickListener {
-            mService.mConnectedThread?.write("check 32")
+            SettingValue.setIChargingCurrent(32)
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":32}\n")
 //            showToast("")
             finish()
         }

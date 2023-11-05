@@ -5,5 +5,5 @@
     android:gravity="center"
     android:padding="5dp"
     android:textColor="#040404"
-    android:textSize="@dimen/_12sdp"
+    android:textSize="@dimen/_16sdp"
     android:textStyle="bold" />

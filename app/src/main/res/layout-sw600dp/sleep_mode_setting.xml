@@ -9,16 +9,16 @@
 
     <Button
         android:id="@+id/backBtn"
-        android:layout_width="0sp"
-        android:layout_height="0sp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/asset_18"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.899"
-        app:layout_constraintWidth_percent="0.5"
-        app:layout_constraintHeight_percent="0.1"/>
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintHeight_percent="0.08"/>
 
     <ImageView
         android:id="@+id/imageView9"
@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.431"
-        app:layout_constraintWidth_percent="1"
+        app:layout_constraintWidth_percent="0.759"
         app:layout_constraintHeight_percent="0.1"/>
 
     <TextView
@@ -60,7 +60,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.246"
-        app:layout_constraintWidth_percent="1"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintWidth_percent="0.759"
         app:layout_constraintHeight_percent="0.1"/>
 
     <Switch
@@ -76,10 +77,10 @@
         android:track="@drawable/track_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265"
+        app:layout_constraintVertical_bias="0.264"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Switch
@@ -95,10 +96,10 @@
         android:track="@drawable/track_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435"
+        app:layout_constraintVertical_bias="0.434"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,18 +7,18 @@
     android:background="@drawable/artboard_3">
 
     <ImageButton
-        android:id="@+id/a13"
+        android:id="@+id/a10"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/asset_23"
+        android:background="@drawable/artboard_40"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425"
-        app:layout_constraintWidth_percent="0.6" />
+        app:layout_constraintVertical_bias="0.311"
+        app:layout_constraintWidth_percent="0.5" />
 
     <ImageButton
         android:id="@+id/a16"
@@ -28,25 +28,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544"
-        app:layout_constraintWidth_percent="0.6" />
+        app:layout_constraintVertical_bias="0.552"
+        app:layout_constraintWidth_percent="0.5" />
 
     <ImageButton
-        android:id="@+id/a20"
+        android:id="@+id/a13"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/artboard_42"
+        android:background="@drawable/asset_23"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663"
-        app:layout_constraintWidth_percent="0.6" />
+        app:layout_constraintVertical_bias="0.431"
+        app:layout_constraintWidth_percent="0.5" />
 
     <ImageButton
         android:id="@+id/a25"
@@ -56,11 +56,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.783"
-        app:layout_constraintWidth_percent="0.6" />
+        app:layout_constraintVertical_bias="0.791"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageButton
+        android:id="@+id/a20"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/artboard_42"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.672"
+        app:layout_constraintWidth_percent="0.5" />
 
     <ImageButton
         android:id="@+id/a32"
@@ -70,26 +84,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901"
-        app:layout_constraintWidth_percent="0.6" />
-
-    <ImageButton
-        android:id="@+id/a10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/artboard_40"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303"
-        app:layout_constraintWidth_percent="0.6"
-        app:layout_constraintHeight_percent="0.1"
-        />
+        app:layout_constraintVertical_bias="0.909"
+        app:layout_constraintWidth_percent="0.5" />
 
     <ImageButton
         android:id="@+id/a6"
@@ -99,11 +98,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182"
-        app:layout_constraintWidth_percent="0.6" />
+        app:layout_constraintVertical_bias="0.191"
+        app:layout_constraintWidth_percent="0.5" />
 
     <TextView
         android:id="@+id/textView2"
@@ -112,7 +111,7 @@
         android:fontFamily="@font/sriracha"
         android:text="เลือกกระแสชาร์จ(แอมป์)"
         android:textColor="@color/white"
-        android:textSize="@dimen/_27sdp"
+        android:textSize="@dimen/_25sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

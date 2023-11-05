@@ -104,7 +104,8 @@ class SetTimePickerActivity : ComponentActivity() {
                 if(hourItemLs[position] != "hour"){
                     selectHour = hourItemLs[position]
                     if(selectMin != "min" && selectMin != null){
-                        mService.mConnectedThread?.write("stopWatch mode start 0:0 Duration $selectHour:$selectMin")
+//                        mService.mConnectedThread?.write("stopWatch mode start 0:0 Duration $selectHour:$selectMin")
+                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"0:0\",\"strDuration\":\"$selectHour:$selectMin\"}\n")
 
                     }
                 }
@@ -126,7 +127,8 @@ class SetTimePickerActivity : ComponentActivity() {
                 if(minItemLs[position] != "min"){
                     selectMin = minItemLs[position]
                     if(selectHour != "hour" && selectHour != null){
-                        mService.mConnectedThread?.write("stopWatch mode start 0:0 Duration $selectHour:$selectMin")
+//                        mService.mConnectedThread?.write("stopWatch mode start 0:0 Duration $selectHour:$selectMin")
+                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"0:0\",\"strDuration\":\"$selectHour:$selectMin\"}\n")
 
                     }
                 }
@@ -159,12 +161,12 @@ class SetTimePickerActivity : ComponentActivity() {
             val minute = c.get(Calendar.MINUTE)
             var hour : String? = null
             var min : String? = null
-            if(hourOfDay<9){
+            if(hourOfDay<=9){
                 hour = "0$hourOfDay"
             }else{
                 hour = hourOfDay.toString()
             }
-            if(minute<9){
+            if(minute<=9){
                 min = "0$minute"
             }else{
                 min = minute.toString()
@@ -246,12 +248,12 @@ class SetTimePickerActivity : ComponentActivity() {
             { _, hourOfDay, minute ->
                 var hour : String? = null
                 var min : String? = null
-                if(hourOfDay<9){
+                if(hourOfDay<=9){
                     hour = "0$hourOfDay"
                 }else{
                     hour = hourOfDay.toString()
                 }
-                if(minute<9){
+                if(minute<=9){
                     min = "0$minute"
                 }else{
                     min = minute.toString()
@@ -275,8 +277,9 @@ class SetTimePickerActivity : ComponentActivity() {
                             , LocalDateTime.of(dateEnd, LocalTime.of(endH!!, endM!!)))
                         val endHours = duration.toHours() % 24
                         val endMinutes = duration.toMinutes() % 60
+                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"$startH:$startM\",\"strDuration\":\"$endHours:$endMinutes\"}\n")
 
-                        mService.mConnectedThread?.write("Timer mode Start $startH:$startM, Duration $endHours:$endMinutes")
+//                        mService.mConnectedThread?.write("Timer mode Start $startH:$startM, Duration $endHours:$endMinutes")
 
                     }
 //                    ********************************
@@ -300,7 +303,15 @@ class SetTimePickerActivity : ComponentActivity() {
                         val endHours = duration.toHours() % 24
                         val endMinutes = duration.toMinutes() % 60
 
-                        mService.mConnectedThread?.write("Timer mode Start $startH:$startM, Duration $endHours:$endMinutes")
+//                        {
+//                            "cmd":23,
+//                            "strStartTime":"xx:xx",
+//                            "strDuration":"xx:xx"
+//                        }
+//                        "{\"cmd\":23,\"strStartTime\":\"xx:xx\",\"strDuration\":\"xx:xx\"}"
+                        mService.mConnectedThread?.write("{\"cmd\":23,\"strStartTime\":\"$startH:$startM\",\"strDuration\":\"$endHours:$endMinutes\"}\n")
+
+//                        mService.mConnectedThread?.write("Timer mode Start $startH:$startM, Duration $endHours:$endMinutes")
 
                     }
 //                    ********************************

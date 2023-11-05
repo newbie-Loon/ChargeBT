@@ -5,13 +5,11 @@ import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
-import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.content.ServiceConnection
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.os.Bundle
-import android.os.IBinder
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
@@ -24,7 +22,7 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.core.app.ActivityCompat
 import com.example.wellcharge.service.BTKeepConnService
-import com.example.wellcharge.service.ServiceHolder
+import com.example.wellcharge.service.SettingValue
 import java.io.File
 
 
@@ -43,8 +41,9 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.conn_bt)
         val btDevice: Spinner = findViewById(R.id.btSelected)
         val btConn: ImageButton = findViewById(R.id.btConn)
-        val wifiConn: ImageButton = findViewById(R.id.wifiConn)
+//        val wifiConn: ImageButton = findViewById(R.id.wifiConn)
         clearCatchData()
+        getDeviceInfo(applicationContext)
         val bluetoothManager: BluetoothManager = getSystemService(BluetoothManager::class.java)
         bluetoothAdapter = bluetoothManager.adapter
         if (ActivityCompat.checkSelfPermission(
@@ -66,7 +65,7 @@ class MainActivity : ComponentActivity() {
         deviceItemls.add("Select Device")
         for (device in pairedDevices) {
             deviceBtList.add(device)
-            deviceItemls.add(device.name + " " + device.address)
+            deviceItemls.add(device.name)
 
         }
         val adapterDevice = ArrayAdapter(
@@ -76,7 +75,7 @@ class MainActivity : ComponentActivity() {
         btDevice.adapter = adapterDevice
 
 
-        val spinnerOnTouch = OnTouchListener { v, event ->
+        val spinnerOnTouch = OnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
                 //Your code
                 val bluetoothManagerOnTouch: BluetoothManager = getSystemService(BluetoothManager::class.java)
@@ -91,7 +90,7 @@ class MainActivity : ComponentActivity() {
                 deviceItemls.add("Select Device")
                 for (device in pairedDevicesin) {
                     deviceBtList.add(device)
-                    deviceItemls.add(device.name + " " + device.address)
+                    deviceItemls.add(device.name)
 
                 }
                 val adapterDevicea = ArrayAdapter(
@@ -118,7 +117,7 @@ class MainActivity : ComponentActivity() {
                     deviceItemls.add("Select Device")
                     for (device in pairedDevicesin) {
                         deviceBtList.add(device)
-                        deviceItemls.add(device.name + " " + device.address)
+                        deviceItemls.add(device.name)
 
                     }
                     val adapterDeviceb = ArrayAdapter(
@@ -161,33 +160,17 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        val serviceConnStat = object : ServiceConnection {
-            override fun onServiceConnected(className: ComponentName, service: IBinder) {
-                val binder = service as BTKeepConnService.LocalBinder
-                mService = binder.getService()
-                mBound = true
-                ServiceHolder.setService(mService)
-            }
-
-            override fun onServiceDisconnected(className: ComponentName) {
-//                Log.e(TAG, "onServiceDisconnected")
-                mBound = false
-            }
-        }
-
-
-
         btConn.setOnClickListener {
             if (someDeviceName != null) {
-                val intentStartBTService = Intent(this, BTKeepConnService::class.java)
-                intentStartBTService.putExtra("someDeviceName", someDeviceName)
-                intentStartBTService.putExtra("someDeviceAddr", someDeviceAddr)
-                bindService(intentStartBTService, serviceConnStat, Context.BIND_AUTO_CREATE)
-//                startService(intentStartBTService)
-//                showToast("$someDeviceName $someDeviceAddr")
+//                val intentStartBTService = Intent(this, BTKeepConnService::class.java)
+//                intentStartBTService.putExtra("someDeviceName", someDeviceName)
+//                intentStartBTService.putExtra("someDeviceAddr", someDeviceAddr)
+//                bindService(intentStartBTService, serviceConnStat, Context.BIND_AUTO_CREATE)
                 val intent = Intent(applicationContext, MainDisplayActivity::class.java)
+                intent.putExtra("someDeviceName", someDeviceName)
+                intent.putExtra("someDeviceAddr", someDeviceAddr)
                 startActivity(intent)
-
+                finish()
             }
         }
 
@@ -222,5 +205,42 @@ class MainActivity : ComponentActivity() {
         )
 
         ActivityCompat.requestPermissions(this, permissions, REQUEST_ENABLE_BT)
+    }
+    private fun getDeviceInfo(context: Context?){
+        try {
+                return if (isTablet(context!!)) {
+                    if (getDevice5Inch(context)) {
+                        SettingValue.setIsTablet(true)
+                    } else {
+                        SettingValue.setIsTablet(false)
+                    }
+                } else {
+                    SettingValue.setIsTablet(false)
+                }
+
+        } catch (e: java.lang.Exception) {
+            SettingValue.setIsTablet(false)
+            e.printStackTrace()
+        }
+    }
+
+
+    private fun getDevice5Inch(context: Context): Boolean {
+         try {
+            val displayMetrics = context.resources.displayMetrics
+            val yinch = displayMetrics.heightPixels / displayMetrics.ydpi
+            val xinch = displayMetrics.widthPixels / displayMetrics.xdpi
+            val diagonalinch = Math.sqrt((xinch * xinch + yinch * yinch).toDouble())
+            if (diagonalinch >= 7) {
+                return true
+            } else {
+                return false
+            }
+        } catch (e: Exception) {
+             return false
+        }
+    }
+    private fun isTablet(context: Context): Boolean {
+        return context.resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK >= Configuration.SCREENLAYOUT_SIZE_LARGE
     }
 }

@@ -31,17 +31,17 @@ class SleepModeActivity : ComponentActivity() {
         closeWhenfinish.setOnCheckedChangeListener { buttonView, isChecked ->
             // show timer picker if false
             if(isChecked){
-                mService.mConnectedThread?.write("closeWhenfinish on")
+                mService.mConnectedThread?.write("closeWhenfinish on\n")
             }else{
-                mService.mConnectedThread?.write("closeWhenfinish off")
+                mService.mConnectedThread?.write("closeWhenfinish off\n")
             }
         }
         chargeWhenPlug.setOnCheckedChangeListener { buttonView, isChecked ->
             // show timer picker if false
             if(isChecked){
-                mService.mConnectedThread?.write("chargeWhenPlug on")
+                mService.mConnectedThread?.write("chargeWhenPlug on\n")
             }else{
-                mService.mConnectedThread?.write("chargeWhenPlug off")
+                mService.mConnectedThread?.write("chargeWhenPlug off\n")
             }
         }
 

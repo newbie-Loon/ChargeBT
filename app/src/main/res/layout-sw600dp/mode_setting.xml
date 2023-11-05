@@ -8,18 +8,30 @@
 
 
     <Button
+        android:id="@+id/modeStop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/asset_13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.135"/>
+
+    <Button
         android:id="@+id/modeAuto"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/asset_14"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191"
-        app:layout_constraintWidth_percent="1"
-        app:layout_constraintHeight_percent="0.12"/>
+        app:layout_constraintVertical_bias="0.185"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.135"/>
 
     <Button
         android:id="@+id/modeAlarm"
@@ -28,26 +40,11 @@
         android:background="@drawable/asset_12"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361"
-        app:layout_constraintWidth_percent="1"
-        app:layout_constraintHeight_percent="0.12"/>
-
-    <Button
-        android:id="@+id/modeStop"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/asset_13"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519"
-        app:layout_constraintWidth_percent="1"
-        app:layout_constraintHeight_percent="0.12"/>
+        app:layout_constraintVertical_bias="0.367"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.135"/>
 
     <TextView
         android:id="@+id/textView19"
@@ -56,7 +53,7 @@
         android:fontFamily="@font/sriracha"
         android:text="โหมดอุณหภูมิ"
         android:textColor="#FFFFFF"
-        android:textSize="@dimen/_45sdp"
+        android:textSize="@dimen/_35sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,23 +72,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.899"
-        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintWidth_percent="0.5"
         app:layout_constraintHeight_percent="0.1"/>
 
     <TextView
         android:id="@+id/DescriptionMode"
-        android:layout_width="384dp"
-        android:layout_height="158dp"
+        android:layout_width="554dp"
+        android:layout_height="191dp"
         android:fontFamily="@font/sriracha"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="@dimen/_18sdp"
+        android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
+        app:layout_constraintVertical_bias="0.742" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

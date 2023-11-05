@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.activity.ComponentActivity
 import com.example.wellcharge.service.BTKeepConnService
 import com.example.wellcharge.service.ServiceHolder
+import com.example.wellcharge.service.SettingValue
 
 class ModeSettingActivity : ComponentActivity() {
     private lateinit var mService: BTKeepConnService
@@ -21,20 +22,24 @@ class ModeSettingActivity : ComponentActivity() {
         val backBtn : Button = findViewById(R.id.backBtn)
         val des : TextView = findViewById(R.id.DescriptionMode)
 
-        //set tick mode here
+        //set init value
         des.text = ""
-
-        setModeSetting("Auto")
+        SettingValue.getIMode()
+        when(SettingValue.getIMode()){
+            0 -> setModeSetting(mode = "Auto",toDevice = false)
+            1 -> setModeSetting(mode = "Alarm",toDevice = false)
+            2 -> setModeSetting(mode = "Stop",toDevice = false)
+        }
         //********------------********
 
         modeAuto.setOnClickListener {
-            setModeSetting("Auto")
+            setModeSetting(mode = "Auto",toDevice = true)
         }
         modeAlarm.setOnClickListener {
-            setModeSetting("Alarm")
+            setModeSetting(mode = "Alarm",toDevice = true)
         }
         modeStop.setOnClickListener {
-            setModeSetting("Stop")
+            setModeSetting(mode = "Stop",toDevice = true)
         }
 
         backBtn.setOnClickListener {
@@ -44,7 +49,7 @@ class ModeSettingActivity : ComponentActivity() {
 
     }
 
-    private fun setModeSetting(mode : String){
+    private fun setModeSetting(mode : String,toDevice : Boolean = true){
         val des : TextView = findViewById(R.id.DescriptionMode)
         val modeAuto : Button = findViewById(R.id.modeAuto)
         val modeAlarm : Button = findViewById(R.id.modeAlarm)
@@ -52,30 +57,45 @@ class ModeSettingActivity : ComponentActivity() {
         modeAuto.compoundDrawablePadding = 15
         modeAlarm.compoundDrawablePadding = 15
         modeStop.compoundDrawablePadding = 15
-
+        var tick : Int = R.drawable.tick
+        if(SettingValue.getIsTablet()){
+            tick = R.drawable.tick_default
+        }
         if(mode == "Auto"){
-            modeAuto.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
+            modeAuto.setCompoundDrawablesWithIntrinsicBounds(tick,0,0,0)
             modeAlarm.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             modeStop.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
             des.text = getString(R.string.AutoModeDes)
-            mService.mConnectedThread?.write("autoMode")
+            if(toDevice) {
+                SettingValue.setIMode(0)
+                mService.mConnectedThread?.write("{\"cmd\":24,\"iMode\":0}\n")
+            }
         }
         if(mode == "Alarm"){
             modeAuto.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            modeAlarm.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
+            modeAlarm.setCompoundDrawablesWithIntrinsicBounds(tick,0,0,0)
             modeStop.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
 
             des.text = getString(R.string.AlarmModeDes)
-            mService.mConnectedThread?.write("AlarmMode")
+            if(toDevice) {
+                SettingValue.setIMode(1)
+                mService.mConnectedThread?.write("{\"cmd\":24,\"iMode\":1}\n")
+            }
         }
         if(mode == "Stop"){
             modeAuto.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
             modeAlarm.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0)
-            modeStop.setCompoundDrawablesWithIntrinsicBounds(R.drawable.tick__1_,0,0,0)
+            modeStop.setCompoundDrawablesWithIntrinsicBounds(tick,0,0,0)
 
             des.text = getString(R.string.StopModeDes)
-            mService.mConnectedThread?.write("StopMode")
+            if(toDevice) {
+                SettingValue.setIMode(2)
+                mService.mConnectedThread?.write("{\"cmd\":24,\"iMode\":2}\n")
+            }
         }
     }
+
 }
+
+
