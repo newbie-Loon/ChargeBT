@@ -175,7 +175,10 @@ class MainDisplayActivity : ComponentActivity() {
                 }
                 3->{
                     status.text = getString(R.string.fullCharge)
-               }
+                }
+                10->{
+                    status.text = getString(R.string.stopCharging)
+                }
             }
         }
 

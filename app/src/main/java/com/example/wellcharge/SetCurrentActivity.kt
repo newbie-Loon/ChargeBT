@@ -45,7 +45,7 @@ class SetCurrentActivity : ComponentActivity() {
 
         a6.setOnClickListener {
             SettingValue.setIChargingCurrent(6)
-            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":6}\n")
+            mService.mConnectedThread?.write("{\"cmd\":22,\"iChargingCurrent\":8}\n")
 //            showToast("")
             finish()
         }

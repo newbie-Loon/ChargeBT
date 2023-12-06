@@ -54,6 +54,7 @@
     <string name="fullCharge">ชาร์จเสร็จสิ้น</string>
     <string name="vehicleConnected">เชื่อมต่อพาหนะ</string>
     <string name="notConnect">ไม่ได้เชื่อมต่อ</string>
+    <string name="stopCharging">หยุดชาร์จ</string>
 
 
 </resources>
